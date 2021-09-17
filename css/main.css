@@ -1,5 +1,7 @@
 html {
   box-sizing: border-box;
+  font-family: "Patua One", serif;
+  line-height: 1.5
 }
 
 *,
@@ -15,4 +17,59 @@ img {
 header {
   /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
   display: contents;
+}
+
+body {
+  background-color: #ccc;
+  display: grid;
+  grid-template-columns: 14rem 1fr;
+  grid-template-areas:
+    "banner banner"
+    "main main"
+}
+
+header {
+  grid-area: banner;
+}
+
+main {
+  grid-area: main;
+  grid-column: 1/-1;
+  grid-row: 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+header img {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+header h1 {
+  grid-column: 1;
+  grid-row: 1;
+  z-index: 1;
+  align-self: flex-end;
+}
+
+header nav {
+  grid-column: 2;
+  grid-row: 1;
+  z-index: 1;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav ul li a {
+  color: #fff;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+
+nav ul li {
+  list-style-type: none;
 }

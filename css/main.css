@@ -20,7 +20,8 @@ header {
 }
 
 body {
-  background-color: #ccc;
+  margin: 1rem;
+  background-color: #f2f1ed;
   display: grid;
   grid-template-columns: 14rem 1fr;
   grid-template-areas:
@@ -38,6 +39,7 @@ main {
   grid-row: 2;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
 header img {
@@ -69,7 +71,19 @@ nav ul li a {
   padding: 1rem;
 }
 
-
 nav ul li {
   list-style-type: none;
+}
+
+figure {
+  margin: 1rem 0;
+}
+
+figcaption h2 {
+  color: #30658d;
+  margin: 1rem 0 0;
+}
+
+figcaption p {
+  margin: 0;
 }

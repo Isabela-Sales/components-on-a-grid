@@ -1,7 +1,7 @@
 html {
   box-sizing: border-box;
-  font-family: "Patua One", serif;
-  line-height: 1.5
+  line-height: 1.5;
+  font-family: "Patua One", sans-serif;
 }
 
 *,
@@ -17,20 +17,18 @@ img {
 header {
   /* Remove the <header> box and allow us to directly apply header’s children to the grid. */
   display: contents;
+  grid-area: banner;
 }
 
 body {
-  margin: 1rem;
+  margin: 0;
+  padding: 1rem;
   background-color: #f2f1ed;
   display: grid;
   grid-template-columns: 14rem 1fr;
   grid-template-areas:
     "banner banner"
-    "main main"
-}
-
-header {
-  grid-area: banner;
+    "main main";
 }
 
 main {
@@ -86,4 +84,5 @@ figcaption h2 {
 
 figcaption p {
   margin: 0;
+  font-family: Georgia, sans-serif;
 }
